@@ -1,0 +1,21 @@
+CREATE OR REPLACE  TABLE `elevated-codex-431815-v2.66degrees.bq_supermarket_sales_fact` (
+    invoice_id STRING NOT NULL,
+    branch STRING,
+    city STRING,
+    customer_id INT64,
+    product_id INT64,
+    quantity INT64,
+    tax FLOAT64,
+    total FLOAT64,
+    date DATE,
+    time TIME,
+    payment STRING,
+    cogs FLOAT64,
+    gross_margin_percentage FLOAT64,
+    gross_income FLOAT64,
+    create_ts TIMESTAMP NOT NULL,
+    last_updt_ts TIMESTAMP NOT NULL,
+PRIMARY KEY (invoice_id) NOT ENFORCED,
+FOREIGN KEY (customer_id) REFERENCES `elevated-codex-431815-v2.66degrees.bq_customer`(customer_id) NOT ENFORCED,
+FOREIGN KEY (product_id) REFERENCES `elevated-codex-431815-v2.66degrees.bq_product`(product_id) NOT ENFORCED
+);
