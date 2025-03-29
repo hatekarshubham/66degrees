@@ -1,0 +1,6 @@
+{
+    "dag_id":"load_tbl_through_df",
+    "schedule":"0 0 * * *",
+    "dataflow_job_nm":"read_from_csv",
+    "filee_prefix":"supermarket_sales.csv"
+}
