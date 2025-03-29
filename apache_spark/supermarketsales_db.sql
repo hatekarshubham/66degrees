@@ -1,9 +1,9 @@
 -- Databricks notebook source
-create database supermarketsales_db;
+CREATE DATABASE supermarketsales_db;
 
 -- COMMAND ----------
 
-CREATE or replace  TABLE supermarketsales_db.customer(
+CREATE OR REPLACE  TABLE supermarketsales_db.customer(
   customer_id BIGINT ,  
   customer_type string, 
   gender string,
@@ -20,7 +20,7 @@ CREATE or replace TABLE supermarketsales_db.product (
 
 -- COMMAND ----------
 
-CREATE or replace TABLE supermarketsales_db.sales_fact (
+CREATE OR REPLACE TABLE supermarketsales_db.sales_fact (
   invoice_id string, 
   customer_id BIGINT,
   product_id BIGINT,
