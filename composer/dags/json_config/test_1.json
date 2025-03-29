@@ -1,4 +1,0 @@
-{
-    "dag_id":"test_json_example_1",
-    "schedule":"@daily"
-}
